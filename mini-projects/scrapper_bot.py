@@ -34,11 +34,7 @@ from bs4 import BeautifulSoup as bs
 # from telepot import Bot
 
 # import telepot
-import telebot
 
-bot_API = '-E46JXMdAuNQI'
-
-bot = telebot.TeleBot(bot_API)
 
 # bot = Bot(token='6180527513:AAFiPaEjN0mJNapMokQPAb-E46JXMdAuNQI')
 
@@ -53,7 +49,3 @@ bot = telebot.TeleBot(bot_API)
 # while True:
 #     bot.sendMessage(g_id, 'aaa')
 
-@Bot.message_handler(commands=['go'])
-def hello(message): 
-    for i in range(100):
-        bot.send_message(message.chat.id,'aaa')
