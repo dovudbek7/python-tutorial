@@ -36,7 +36,7 @@ from bs4 import BeautifulSoup as bs
 # import telepot
 import telebot
 
-bot_API = '6180527513:AAFiPaEjN0mJNapMokQPAb-E46JXMdAuNQI'
+bot_API = '-E46JXMdAuNQI'
 
 bot = telebot.TeleBot(bot_API)
 
