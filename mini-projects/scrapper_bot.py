@@ -31,17 +31,29 @@ from bs4 import BeautifulSoup as bs
 #     for k in jokes.items():
 #         file.write(json.dumps(jokes))
 
-from telepot import Bot
+# from telepot import Bot
 
-bot = Bot(token='6180527513:AAFiPaEjN0mJNapMokQPAb-E46JXMdAuNQI')
+# import telepot
+import telebot
+
+bot_API = '6180527513:AAFiPaEjN0mJNapMokQPAb-E46JXMdAuNQI'
+
+bot = telebot.TeleBot(bot_API)
+
+# bot = Bot(token='6180527513:AAFiPaEjN0mJNapMokQPAb-E46JXMdAuNQI')
 
 
-g_id = 5594897676
+
+# g_id = 5594897676
 
 # bot.sendMassage(g_id,'hello')
 # print(bot.se(g_id,'hello'))
 # jokes = None
 
-while True:
-    bot.sendMessage(g_id, 'aaa')
+# while True:
+#     bot.sendMessage(g_id, 'aaa')
 
+@Bot.message_handler(commands=['go'])
+def hello(message): 
+    for i in range(100):
+        bot.send_message(message.chat.id,'aaa')
